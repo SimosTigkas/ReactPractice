@@ -1,6 +1,7 @@
 // import { createElement } from "react"
-// import { createRoot } from "react-dom/client"
-// const root = createRoot(document.getElementById("root"))
+import { createRoot } from "react-dom/client"
+import reactLogo from './React.png';
+const root = createRoot(document.getElementById("root"))
 
 // function MyAwesomeNavbar() {
 //     return (
@@ -44,15 +45,30 @@
 //     return <h1>React is great!</h1>
 // }
 
-// root.render(
-//     <div>
+//  root.render(
+//      <div>
 //         <MyAwesomeNavbar />
 //         <MainContent />
-//     </div>
-// )
+//      </div>
+//  )
 
-const newElement = document.createElement("h1")
-newElement.textContent = "This is imperative coding"
-newElement.className = "header"
-document.getElementById("root").appendChild(newElement);
+// const newElement = document.createElement("h1")
+// newElement.textContent = "Hello from Odin"
+// newElement.className = "header"
+// document.getElementById("root").appendChild(newElement);
+
+// root.render(<h1>Hello from Odin</h1>)
+root.render(
+    <main>
+        <img src={reactLogo} width="40px" alt="React logo"/>
+        <h1>Fun facts about React</h1>
+        <ul>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100K stars on GitHub</li>
+            <li>Is maintained by Meta</li>
+            <li>Powers thousands of enterprise apps, inluding mobile apps</li>
+        </ul>
+    </main>
+)
 
